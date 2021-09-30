@@ -6,7 +6,7 @@ import renderWithRouter from './util/renderWithRouter';
 
 import App from '../App';
 
-describe('Teste o componente App', () => {
+describe('1. Testa o componente <App.js />', () => {
   it('O primeiro link deve possuir o texto Home e deve ser clicavel', () => {
     render(
       <MemoryRouter>
@@ -49,7 +49,7 @@ describe('Teste o componente App', () => {
     userEvent.click(favoritePokémonsLink);
   });
 
-  test('Testa se a aplicação é redirecionada para a página Not Found'
+  it('Testa se a aplicação é redirecionada para a página Not Found'
     + 'ao entrar em uma URL desconhecida', () => {
     const { history } = renderWithRouter(<App />);
 
