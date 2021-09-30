@@ -2,12 +2,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
-import renderWithRouter from './util/renderWithRouter';
+import renderWithRouter from './helper/renderWithRouter';
 
 import App from '../App';
 
 describe('1. Testa o componente <App.js />', () => {
-  it('O primeiro link deve possuir o texto Home e deve ser clicavel', () => {
+  it('1.1 - O primeiro link deve possuir o texto Home e deve ser clicavel', () => {
     render(
       <MemoryRouter>
         <App />
@@ -21,7 +21,7 @@ describe('1. Testa o componente <App.js />', () => {
     userEvent.click(homeLink);
   });
 
-  it('O segundo link deve possuir o texto About e deve ser clicavel', () => {
+  it('1.2 - O segundo link deve possuir o texto About e deve ser clicavel', () => {
     render(
       <MemoryRouter>
         <App />
@@ -35,7 +35,8 @@ describe('1. Testa o componente <App.js />', () => {
     userEvent.click(aboutLink);
   });
 
-  it('O terceiro link deve possuir o texto Favorite Pokémons e deve ser clicavel', () => {
+  it('1.3 - O terceiro link deve possuir o texto'
+    + 'Favorite Pokémons e deve ser clicavel', () => {
     render(
       <MemoryRouter>
         <App />
@@ -49,7 +50,7 @@ describe('1. Testa o componente <App.js />', () => {
     userEvent.click(favoritePokémonsLink);
   });
 
-  it('Testa se a aplicação é redirecionada para a página Not Found'
+  it('1.4 - Testa se a aplicação é redirecionada para a página Not Found'
     + 'ao entrar em uma URL desconhecida', () => {
     const { history } = renderWithRouter(<App />);
 
