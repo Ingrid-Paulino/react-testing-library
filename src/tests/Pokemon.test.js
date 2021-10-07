@@ -96,9 +96,9 @@ describe('6. Testa o componente <Pokemon.js />', () => {
   describe('Existe um ícone de estrela nos Pokémons favoritados.', () => {
     beforeEachRenderPokemon();
 
-    it(`6.7 - O ícone deve ser uma imagem com o atributo src contendo o caminho /star-icon.svg.
-        A imagem deve ter o atributo alt igual a <pokemon> is marked as favorite,
-        onde <pokemon> é o nome do Pokémon exibido.`,
+    it('6.7 - O ícone deve ser uma imagem com o atributo src contendo'
+      + 'o caminho /star-icon.svg. A imagem deve ter o atributo alt igual'
+      + 'a <pokemon> is marked as favorite, onde <pokemon> é o nome do Pokémon exibido.',
     () => {
       const complemento = 'is marked as favorite';
       const estrelaIcon = screen.getByAltText(`${pokemonMock.name} ${complemento}`);
