@@ -13,7 +13,7 @@ import pokemons from '../data';
 
 beforeEach(() => renderWithRouter(<App />));
 
-describe('Testa o componente <Pokedex.js />', () => {
+describe('5. Testa o componente <Pokedex.js />', () => {
   it('Testa se página contém um heading h2 com o texto Encountered pokémons', () => {
     const headingH2 = screen.getByRole('heading', {
       level: 2,
@@ -39,7 +39,7 @@ describe('Testa o componente <Pokedex.js />', () => {
   });
 });
 
-describe('Pokédex tem os botões de filtro', () => {
+describe('5.1 Pokédex tem os botões de filtro', () => {
   const types = pokemons.reduce((acc, pokemon) => {
     if (!acc.includes(pokemon.type)) {
       acc.push(pokemon.type);
